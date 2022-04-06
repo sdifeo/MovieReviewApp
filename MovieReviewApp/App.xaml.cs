@@ -10,7 +10,7 @@ namespace MovieReviewApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SignIn();
         }
 
         protected override void OnStart()

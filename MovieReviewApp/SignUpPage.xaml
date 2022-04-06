@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieReviewApp.SignUpPage">
+
+    <StackLayout>
+
+        <Frame BackgroundColor="#BA8F95" HeightRequest="200" HorizontalOptions="FillAndExpand"></Frame>
+
+        <StackLayout Margin="15, -50, 15, 0">
+
+            <Frame HasShadow="True" HeightRequest="400" HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <StackLayout>
+                        <Image Source="../"></Image>
+                    </StackLayout>
+
+
+                    <StackLayout>
+                        <Label FontFamily="Arial" Text="Register" TextColor="Black" FontSize="30" HorizontalTextAlignment="Center" ></Label>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Entry Placeholder="email"></Entry>
+                        <Entry IsPassword="True" Placeholder="password"></Entry>
+                    </StackLayout>
+
+                    <Button Margin="0, 40, 0, 0"  Text="Sign up" CornerRadius="20" VerticalOptions="End" BackgroundColor="#BA8F95"></Button>
+
+
+                    <StackLayout Margin="0, 70, 0, 0">
+                        <Button Padding="0" Text="Already have an account?" TextColor="Black" BackgroundColor="White"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+
+
+            </Frame>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
