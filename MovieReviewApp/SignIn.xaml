@@ -21,15 +21,15 @@
                     </StackLayout>
 
                     <StackLayout>
-                        <Entry Placeholder="email"></Entry>
-                        <Entry IsPassword="True" Placeholder="password"></Entry>
+                        <Entry Placeholder="email" x:Name="input_email"></Entry>
+                        <Entry IsPassword="True" Placeholder="password" x:Name="input_password"></Entry>
                     </StackLayout>
 
-                    <Button Margin="0, 40, 0, 0"  Text="Sign in" CornerRadius="20" VerticalOptions="End" BackgroundColor="#BA8F95"></Button>
+                    <Button Margin="0, 40, 0, 0"  Text="Sign in" CornerRadius="20" VerticalOptions="End" BackgroundColor="#BA8F95" Clicked="User_Login"></Button>
 
 
                     <StackLayout Margin="0, 70, 0, 0">
-                        <Button Padding="0" Text="Need an account?" TextColor="Black" BackgroundColor="White"></Button>
+                        <Button Padding="0" Text="Need an account?" TextColor="Black" BackgroundColor="White" Clicked="Button_Clicked"></Button>
                     </StackLayout>
                 </StackLayout>
 
