@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
+using MovieReviewApp.Models;
 
 namespace MovieReviewApp
 {
@@ -24,10 +26,23 @@ namespace MovieReviewApp
 
         private void User_Login(object sender, EventArgs e)
         {
-            string email = input_email.Text;
-            string password = input_password.Text;
+            string email = input_email.Text.Trim();
+            string password = input_password.Text.Trim();
 
-            Navigation.PushAsync(new CarouselPage());
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<User>();
+
+                User user = conn.Find<User>(email);
+                if (user != null && password.Equals(user.Password))
+                {
+                    Navigation.PushAsync(new CarouselPage());
+                }
+                else
+                {
+                    DisplayAlert("Failed", "Account or password is invalid", "OK");
+                }
+            }
         }
     }
 }
