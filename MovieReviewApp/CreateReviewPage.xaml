@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieReviewApp.CreateReviewPage">
+
+    <StackLayout Margin="0">
+
+        <StackLayout Margin="15, 65, 15, 0">
+
+            <Frame HasShadow="True" HeightRequest="400" HorizontalOptions="FillAndExpand">
+
+                <StackLayout>
+                    <StackLayout >
+                        <Label x:Name="Review_Score" Text="Movie Review" HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="Black"></Label>
+                        <Picker WidthRequest="10">
+                            <Picker.Items>
+                                <x:String>1</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Entry x:Name="Movie_Title" Placeholder="Movie Title"></Entry>
+                    </StackLayout>
+
+                    <StackLayout Margin="50">
+                        <Button BackgroundColor="#BA8F95" Text="Save Review " VerticalOptions="End" Clicked="SaveReviewBtn"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+
+            </Frame>
+            
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

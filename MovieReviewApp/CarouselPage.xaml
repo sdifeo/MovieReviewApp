@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MovieReviewApp.CarouselPage">
 
-    <CarouselView x:Name="carouselView">
-        <CarouselView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout>
-                    <Frame
+    <StackLayout >
+        <StackLayout x:Name="MainStack">
+            
+        </StackLayout>
+        <CarouselView x:Name="ReviewCarousel">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame
                        HasShadow="True"
                        BorderColor="DarkGray"
                        CornerRadius="5"
@@ -15,25 +19,29 @@
                        HeightRequest="300"
                        HorizontalOptions="Center"
                        VerticalOptions="CenterAndExpand">
-                        <StackLayout>
-                            <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                            </StackLayout.GestureRecognizers>
-                            <Label Text="{Binding id}"
+                            <!--<StackLayout>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="{Binding id}"
                                FontAttributes="Bold"
                                FontSize="Large"
                                HorizontalOptions="Center"
                                VerticalOptions="Center" />
-                            <Image Source="{Binding thumbnailUrl} "
+                                <Image Source="{Binding thumbnailUrl} "
                                Aspect="AspectFill"
                                HeightRequest="150"
                                WidthRequest="150"
                                HorizontalOptions="Center" />
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </DataTemplate>
-        </CarouselView.ItemTemplate>
-    </CarouselView>
+                            </StackLayout>-->
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <Button Text="Create Review" BackgroundColor="#BA8F95" Clicked="GoToCreateReview"></Button>
+        
+    </StackLayout>
 
 </ContentPage>
