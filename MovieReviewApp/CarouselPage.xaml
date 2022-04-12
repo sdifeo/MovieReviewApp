@@ -5,7 +5,7 @@
 
     <StackLayout >
         <StackLayout x:Name="MainStack">
-            
+
         </StackLayout>
         <CarouselView x:Name="ReviewCarousel">
             <CarouselView.ItemTemplate>
@@ -17,23 +17,37 @@
                        CornerRadius="5"
                        Margin="20"
                        HeightRequest="300"
+                        WidthRequest="275"
                        HorizontalOptions="Center"
                        VerticalOptions="CenterAndExpand">
+
                             <StackLayout>
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                                 </StackLayout.GestureRecognizers>
+
                                 <Label Text="{Binding Title}"
                                FontAttributes="Bold"
                                FontSize="Large"
                                HorizontalOptions="Center"
                                VerticalOptions="Center" />
+
                                 <Image Source="{Binding PosterPath} "
                                Aspect="AspectFill"
                                HeightRequest="150"
                                WidthRequest="150"
                                HorizontalOptions="Center" />
+
+                                <Label Text="{Binding Score}"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+
+                                <Label Text="{Binding MovieNote}"
+                               FontSize="Small"/>
                             </StackLayout>
+
                         </Frame>
                     </StackLayout>
                 </DataTemplate>
@@ -41,7 +55,7 @@
         </CarouselView>
 
         <Button Text="Create Review" BackgroundColor="#BA8F95" Clicked="GoToCreateReview"></Button>
-        
+
     </StackLayout>
 
 </ContentPage>

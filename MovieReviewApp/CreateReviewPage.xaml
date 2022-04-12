@@ -11,8 +11,8 @@
 
                 <StackLayout>
                     <StackLayout >
-                        <Label x:Name="Review_Score" Text="Movie Review" HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="Black"></Label>
-                        <Picker WidthRequest="10">
+                        <Label  Text="Movie Review" HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="Black"></Label>
+                        <Picker WidthRequest="10" x:Name="Review_Score">
                             <Picker.Items>
                                 <x:String>1</x:String>
                                 <x:String>2</x:String>
@@ -30,6 +30,10 @@
 
                     <StackLayout>
                         <Entry x:Name="Movie_Title" Placeholder="Movie Title"></Entry>
+                    </StackLayout>
+
+                    <StackLayout Margin="0, 50, 0, 10">
+                        <Entry x:Name="Movie_Notes" Placeholder="Movie Notes"></Entry>
                     </StackLayout>
 
                     <StackLayout Margin="50">

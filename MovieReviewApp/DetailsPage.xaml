@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieReviewApp.DetailsPage">
+
+    <StackLayout>
+        <Label TextColor="Black" Text="Details" HorizontalOptions="Center" FontAttributes="Bold" FontSize="40"></Label>
+
+        <Frame>
+            <StackLayout >
+
+                <Label TextColor="Black" x:Name="LblTitle" Text="{Binding Title}"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+
+                <Image x:Name="ImgPoster" Source="{Binding PosterPath} "
+                               Aspect="AspectFill"
+                               HeightRequest="150"
+                               WidthRequest="150"
+                               HorizontalOptions="Center" />
+
+                <Label TextColor="Black" x:Name="LblScore" Text="{Binding Score}"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+
+                <Label TextColor="Black" x:Name="LblNote" Text="{Binding MovieNote}"
+                               FontSize="Small"/>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout Margin="10, 30, 10, 10">
+            <Label TextColor="Black" Text="Description" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"></Label>
+            <Label TextColor="Black" Text="MOVIE DESCRIPTION" x:Name="Movie_Description" HorizontalOptions="Center"></Label>
+            <Label TextColor="Black" Text="Release Date" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"></Label>
+            <Label TextColor="Black" Text="MOVIE RELEASE DATE" x:Name="Movie_ReleaseDate" HorizontalOptions="Center"></Label>
+        </StackLayout>
+
+
+        <StackLayout Margin="10, 30, 10, 10">
+            <Button Text="Edit Review" Clicked="EditReviewBtn" VerticalOptions="End" BackgroundColor="#BA8F95"></Button>
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>

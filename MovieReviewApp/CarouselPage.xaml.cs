@@ -17,9 +17,11 @@ namespace MovieReviewApp
         public CarouselPage()
         {
             InitializeComponent();
+
+            LoadCarousel();
         }
 
-        protected override void OnAppearing()
+        public void LoadCarousel()
         {
             base.OnAppearing();
 
@@ -47,12 +49,15 @@ namespace MovieReviewApp
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
+            var data = ReviewCarousel.CurrentItem;
 
+            Navigation.PushAsync(new DetailsPage(data));
         }
 
         private void GoToCreateReview(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CreateReviewPage());
+
         }
     }
 }

@@ -24,8 +24,9 @@ namespace MovieReviewApp
 
         private async void SaveReviewBtn(object sender, EventArgs e)
         {
-            var score = Review_Score.Text.Trim();
+            var score = Review_Score.SelectedItem as string;
             var title = Movie_Title.Text.Trim();
+            var notes = Movie_Notes.Text.Trim();
 
             if (score == null)
             {
@@ -51,6 +52,7 @@ namespace MovieReviewApp
                 {
                     Score = score,
                     Title = title,
+                    MovieNote = notes,
                     ReleaseDate = movieSearch.Results[0].Release_Date,
                     PosterPath = "https://image.tmdb.org/t/p/original/" + movieSearch.Results[0].Poster_Path
                 };
