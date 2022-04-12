@@ -19,21 +19,21 @@
                        HeightRequest="300"
                        HorizontalOptions="Center"
                        VerticalOptions="CenterAndExpand">
-                            <!--<StackLayout>
+                            <StackLayout>
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                                 </StackLayout.GestureRecognizers>
-                                <Label Text="{Binding id}"
+                                <Label Text="{Binding Title}"
                                FontAttributes="Bold"
                                FontSize="Large"
                                HorizontalOptions="Center"
                                VerticalOptions="Center" />
-                                <Image Source="{Binding thumbnailUrl} "
+                                <Image Source="{Binding PosterPath} "
                                Aspect="AspectFill"
                                HeightRequest="150"
                                WidthRequest="150"
                                HorizontalOptions="Center" />
-                            </StackLayout>-->
+                            </StackLayout>
                         </Frame>
                     </StackLayout>
                 </DataTemplate>
