@@ -28,7 +28,8 @@ namespace MovieReviewApp
             ImgPoster.Source = data.PosterPath.ToString();
             LblScore.Text = data.Score.ToString();
             LblNote.Text = data.MovieNote.ToString();
-
+            Movie_Description.Text = data.Overview;
+            Movie_ReleaseDate.Text = data.ReleaseDate;
         }
 
         private void EditReviewBtn(object sender, EventArgs e)
@@ -39,13 +40,7 @@ namespace MovieReviewApp
             LblScore.Text = data.Score.ToString();
             LblNote.Text = data.MovieNote.ToString();
 
-            Review review = new Review();
-
-            review.Score = data.Score;
-            review.MovieNote = data.MovieNote;
-
-
-            Navigation.PushAsync(new EditReviewPage(review));
+            Navigation.PushAsync(new EditReviewPage(data));
         }
     }
 }

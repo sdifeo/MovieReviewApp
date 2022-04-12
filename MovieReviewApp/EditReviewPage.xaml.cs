@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MovieReviewApp.Models;
+using SQLite;
 
 namespace MovieReviewApp
 {
@@ -33,7 +34,22 @@ namespace MovieReviewApp
             var newScore = Review_Score.SelectedItem.ToString();
             var newNote = LblNote.Text.ToString().Trim();
 
+            data.Score = newScore;
+            data.MovieNote = newNote;
 
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<Review>();
+                int row = conn.Update(data);
+                if (row > 0)
+                {
+                    DisplayAlert("Success", "review updated", "OK");
+                }
+                else
+                {
+                    DisplayAlert("Failed", "review not updated", "OK");
+                }
+            }
         }
     }
 }

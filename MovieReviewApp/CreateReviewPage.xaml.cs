@@ -54,7 +54,8 @@ namespace MovieReviewApp
                     Title = title,
                     MovieNote = notes,
                     ReleaseDate = movieSearch.Results[0].Release_Date,
-                    PosterPath = "https://image.tmdb.org/t/p/original/" + movieSearch.Results[0].Poster_Path
+                    PosterPath = "https://image.tmdb.org/t/p/original/" + movieSearch.Results[0].Poster_Path,
+                    Overview = movieSearch.Results[0].Overview
                 };
 
                 using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

@@ -13,5 +13,6 @@ namespace MovieReviewApp.Models
     {
         public string Release_Date { get; set; }
         public string Poster_Path { get; set; }
+        public string Overview { get; set; }
     }
 }

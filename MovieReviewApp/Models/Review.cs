@@ -19,5 +19,8 @@ namespace MovieReviewApp.Models
         public string PosterPath { get; set; }
         [MaxLength(250)]
         public string MovieNote { get; set; }
+        [MaxLength(250)]
+        public string Overview { get; set; }
+
     }
 }
